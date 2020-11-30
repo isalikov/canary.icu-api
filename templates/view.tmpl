@@ -14,7 +14,6 @@
     <style>
       .title {
         margin-bottom: 30px;
-        text-align: center;
       }
 
       .preview {
@@ -27,7 +26,6 @@
       .message {
         line-height: 28px;
         font-size: 16px;
-        text-align: center;
       }
 
       .content {
@@ -42,7 +40,7 @@
 	<body>
     <div class="container">
       <div class="content">
-        <h1 class="title">{{ .Title }}</h1>
+        <h3 class="title">{{ .Title }}</h3>
         <img class="preview" src={{ .Src }} />
         <p class="message">{{ .Text }}</p>
       </div>
