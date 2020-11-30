@@ -5,13 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://canary.icu/v/{{ .Title }}" />
+    <meta property="og:image" content="{{ .PreviewImage }}" />
+
+    <style>
+      .title {
+        margin-bottom: 30px;
+      }
+
+      .preview {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .message {
+        line-height: 28px;
+      }
+    </style>
+
   </head>
 
 	<body>
     <div class="container">
-      <h3>{{ .Title }}</h3>
-      <img src={{ .PreviewImage }} />
-      <p>{{ .Message }}</p>
+      <h3 class="title">{{ .Title }}</h3>
+      <img class="preview" src={{ .PreviewImage }} />
+      <p class="message">{{ .Message }}</p>
     </div>
   </body>
 </html>
