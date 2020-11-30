@@ -5,4 +5,5 @@ COPY . .
 
 RUN make build
 
+EXPOSE 8080
 CMD ["./target/api"]
