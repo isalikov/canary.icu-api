@@ -9,7 +9,7 @@
     <meta property="og:title" content="{{ .Title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://canary.icu/v/{{ .Title }}" />
-    <meta property="og:image" content="{{ .PreviewImage }}" />
+    <meta property="og:image" content="{{ .Src }}" />
 
     <style>
       .title {
@@ -43,8 +43,8 @@
     <div class="container">
       <div class="content">
         <h1 class="title">{{ .Title }}</h1>
-        <img class="preview" src={{ .PreviewImage }} />
-        <p class="message">{{ .Message }}</p>
+        <img class="preview" src={{ .Src }} />
+        <p class="message">{{ .Text }}</p>
       </div>
     </div>
   </body>
