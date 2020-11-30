@@ -1,0 +1,25 @@
+kind: pipeline
+type: docker
+name: base
+
+steps:
+  - name: build
+    image: golang
+    commands:
+      - make build
+    when:
+      event:
+        - push
+
+  - name: image
+    image: plugins/docker
+    pull: always
+    settings:
+      repo: iknpx/canary.icu-bot
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+    when:
+      event:
+        - push
