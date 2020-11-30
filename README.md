@@ -22,5 +22,6 @@ docker run --rm --name canary.icu-api \
     --network canary.icu-net \
     -e REDIS_HOST=redis \
     -e REDIS_PORT=6379 \
+    -p 8080:8080 \
      -d iknpx/canary.icu-api
 ```
