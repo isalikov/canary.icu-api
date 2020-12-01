@@ -41,7 +41,9 @@
     <div class="container">
       <div class="content">
         <h3 class="title">{{ .Title }}</h3>
+        {{ if .Src }}
         <img class="preview" src={{ .Src }} />
+        {{ end }}
         <p class="message">{{ .Text }}</p>
       </div>
     </div>
